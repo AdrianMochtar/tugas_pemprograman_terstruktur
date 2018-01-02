@@ -29,6 +29,35 @@ int main(){
 		do{
 		cout << a3c[z]<< " | ";	z++;}
 		while (z<5);cout << endl;
+	//AMBIL NILAI MAX TIAP KRITERIA
+	double mc[5]={
+	max(a1c[0], max(a2c[0],a3c[0])),
+	max(a1c[1], max(a2c[1],a3c[1])),
+	max(a1c[2], max(a2c[2],a3c[2])),
+	max(a1c[3], max(a2c[3],a3c[3])),
+	max(a1c[4], max(a2c[4],a3c[4]))};
+	
+	//BUAT MATRIKS R
+	double Ra1c[5]={(a1c[0]/mc[0]),(a1c[1]/mc[1]),(a1c[2]/mc[2]),(a1c[3]/mc[3]),(a1c[4]/mc[4])};
+	double Ra2c[5]={(a2c[0]/mc[0]),(a2c[1]/mc[1]),(a2c[2]/mc[2]),(a2c[3]/mc[3]),(a2c[4]/mc[4])};
+	double Ra3c[5]={(a3c[0]/mc[0]),(a3c[1]/mc[1]),(a3c[2]/mc[2]),(a3c[3]/mc[3]),(a3c[4]/mc[4])};
+	
+	cout << "MATRIKS R : "<< endl;
+	
+	int a;
+	for (a=0;a<5;a++)
+	    cout << Ra1c[a]<< " | ";
+	    cout << endl;
+	    
+	int b;
+	for (b=0;b<5;b++)
+	    cout << Ra2c[b]<< " | ";
+		cout <<endl;
+		
+	int c;
+	for (c=0;c<5;c++)
+	    cout << Ra3c[c]<< " | ";
+		cout <<endl;
 		
 	cout << endl;
 	// DEKLARASI VARIABEL
@@ -50,32 +79,6 @@ int main(){
 	w3=4;
 	w4=4;
 	w5=2;
-	
-	// AMBIL NILAI MAX TIAP KRITERIA
-	mc1=max(a1c1,max(a2c1,a3c1));
-	mc2=max(a1c2,max(a2c2,a3c2));
-	mc3=max(a1c3,max(a2c3,a3c3));
-	mc4=max(a1c4,max(a2c4,a3c4));
-	mc5=max(a1c5,max(a2c5,a3c5));
-	
-	// BUAT MATRIKS R
-	Ra1c1 = (a1c1/mc1);
-	Ra1c2 = (a1c2/mc2);
-	Ra1c3 = (a1c3/mc3);
-	Ra1c4 = (a1c4/mc4);
-	Ra1c5 = (a1c5/mc5);
-	
-	Ra2c1 = (a2c1/mc1);
-	Ra2c2 = (a2c2/mc2);
-	Ra2c3 = (a2c3/mc3);
-	Ra2c4 = (a2c4/mc4);
-	Ra2c5 = (a2c5/mc5);
-	
-	Ra3c1 = (a3c1/mc1);
-	Ra3c2 = (a3c2/mc2);
-	Ra3c3 = (a3c3/mc3);
-	Ra3c4 = (a3c4/mc4);
-	Ra3c5 = (a3c5/mc5);
 	
 	// MATRIKS R * W
 	RWa1c1 = Ra1c1*w1;
@@ -102,11 +105,6 @@ int main(){
 	ha3=RWa3c1+RWa3c2+RWa3c3+RWa3c4+RWa3c5;
 		
 	// MENAMPILKAN NILAI
-	cout << "MATRIKS R :"<<endl;
-	cout << Ra1c1 <<" | "<<Ra1c2<<" | "<<Ra1c3<<" | "<<Ra1c4<<" | "<<Ra1c5<<endl;
-	cout << Ra2c1 <<" | "<<Ra2c2<<" | "<<Ra2c3<<" | "<<Ra2c4<<" | "<<Ra2c5<<endl;
-	cout << Ra3c1 <<" | "<<Ra3c2<<" | "<<Ra3c3<<" | "<<Ra3c4<<" | "<<Ra3c5<<endl;
-	cout << endl;
 	cout << "BOBOT W :"<<endl;
 	cout << w1 <<" | "<<w2<<" | "<<w3<<" | "<<w4<<" | "<<w5<<endl;
 	cout << endl;
