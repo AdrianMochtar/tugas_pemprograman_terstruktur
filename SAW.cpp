@@ -72,32 +72,36 @@ int main(){
 	
 	//MEMANGGIL FUNGSI
 	MatriksW(5,3,4,4,2);
-	// DEKLARASI VARIABEL
-	double RWa1c1,RWa1c2,RWa1c3,RWa1c4,RWa1c5;
-	double RWa2c1,RWa2c2,RWa2c3,RWa2c4,RWa2c5;
-	double RWa3c1,RWa3c2,RWa3c3,RWa3c4,RWa3c5;
-		
-	double mc1,mc2,mc3,mc4,mc5;
-	double ha1,ha2,ha3;
 	
 	// MATRIKS R * W
-	RWa1c1 = Ra1c1*w1;
-	RWa1c2 = Ra1c2*w2;
-	RWa1c3 = Ra1c3*w3;
-	RWa1c4 = Ra1c4*w4;
-	RWa1c5 = Ra1c5*w5;
-
-	RWa2c1 = Ra2c1*w1;
-	RWa2c2 = Ra2c2*w2;
-	RWa2c3 = Ra2c3*w3;
-	RWa2c4 = Ra2c4*w4;
-	RWa2c5 = Ra2c5*w5;
+	double w[5]={5,3,4,4,2};
 	
-	RWa3c1 = Ra3c1*w1;
-	RWa3c2 = Ra3c2*w2;
-	RWa3c3 = Ra3c3*w3;
-	RWa3c4 = Ra3c4*w4;
-	RWa3c5 = Ra3c5*w5;
+	double RWa1c[5]={(Ra1c[0]*w[0]),(Ra1c[1]*w[1]),(Ra1c[2]*w[2]),(Ra1c[3]*w[3]),(Ra1c[4]*w[4])};
+	double RWa2c[5]={(Ra2c[0]*w[0]),(Ra2c[1]*w[1]),(Ra2c[2]*w[2]),(Ra2c[3]*w[3]),(Ra2c[4]*w[4])};
+	double RWa3c[5]={(Ra3c[0]*w[0]),(Ra3c[1]*w[1]),(Ra3c[2]*w[2]),(Ra3c[3]*w[3]),(Ra3c[4]*w[4])};
+	
+	cout << "MATRIKS R * W : "<< endl;
+	int d=0;
+	while (d<5)
+		{cout << RWa1c[d]<< " | "; d++;
+	}
+	cout << endl;
+	
+	int e=0;
+	while (e<5)
+		{cout << RWa2c[e]<< " | "; e++;
+	}
+	cout << endl;
+	
+	int f=0;
+	while (f<5)
+		{cout << RWa3c[f]<< " | "; f++;
+	}
+	cout << endl;
+	cout << endl;
+	// DEKLARASI VARIABEL
+		
+	double ha1,ha2,ha3;
 	
 	// PENJUMLAHAN HASIL R * W	
 	ha1=RWa1c1+RWa1c2+RWa1c3+RWa1c4+RWa1c5;
@@ -105,11 +109,6 @@ int main(){
 	ha3=RWa3c1+RWa3c2+RWa3c3+RWa3c4+RWa3c5;
 		
 	// MENAMPILKAN NILAI
-	cout << "MATRIKS R * W :"<<endl;
-	cout << RWa1c1 <<" | "<<RWa1c2<<" | "<<RWa1c3<<" | "<<RWa1c4<<" | "<<RWa1c5<<endl;
-	cout << RWa2c1 <<" | "<<RWa2c2<<" | "<<RWa2c3<<" | "<<RWa2c4<<" | "<<RWa2c5<<endl;
-	cout << RWa3c1 <<" | "<<RWa3c2<<" | "<<RWa3c3<<" | "<<RWa3c4<<" | "<<RWa3c5<<endl;
-	cout << endl;
 	cout << "HASIL AKHIR  :"<<endl;
 	cout << "Nilai A1 : "<<ha1<<endl;
 	cout << "Nilai A2 : "<<ha2<<endl;
