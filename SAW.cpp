@@ -4,7 +4,6 @@ using namespace std;
 
 //MENAMBAH FUNGSI
 void MatriksW(double w1, double w2, double w3, double w4, double w5){
-	cout << endl;
 	cout << "MATRIKS W :"<<endl;
 	cout << w1 <<" | "<<w2<<" | "<<w3<<" | "<<w4<<" | "<<w5<<" | "<<endl;
 	cout << endl;
@@ -99,18 +98,15 @@ int main(){
 	}
 	cout << endl;
 	cout << endl;
-	// DEKLARASI VARIABEL
-		
-	double ha1,ha2,ha3;
 	
-	// PENJUMLAHAN HASIL R * W	
-	ha1=RWa1c1+RWa1c2+RWa1c3+RWa1c4+RWa1c5;
-	ha2=RWa2c1+RWa2c2+RWa2c3+RWa2c4+RWa2c5;
-	ha3=RWa3c1+RWa3c2+RWa3c3+RWa3c4+RWa3c5;
-		
-	// MENAMPILKAN NILAI
-	cout << "HASIL AKHIR  :"<<endl;
-	cout << "Nilai A1 : "<<ha1<<endl;
-	cout << "Nilai A2 : "<<ha2<<endl;
-	cout << "Nilai A3 : "<<ha3<<endl;
+	//PENJUMLAHAN R * W
+	cout << "HASIL AKHIR : "<< endl;
+	double ha[3]={
+	RWa1c[0]+RWa1c[1]+RWa1c[2]+RWa1c[3]+RWa1c[4],
+	RWa2c[0]+RWa2c[1]+RWa2c[2]+RWa2c[3]+RWa2c[4],
+	RWa3c[0]+RWa3c[1]+RWa3c[2]+RWa3c[3]+RWa3c[4]};
+	
+	cout <<"NIlai A1 : "<<ha[0]<<endl; 
+	cout <<"NIlai A2 : "<<ha[1]<<endl;
+	cout <<"NIlai A3 : "<<ha[2]<<endl;
 }
